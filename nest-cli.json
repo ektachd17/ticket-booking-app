@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/bookticket-api-gateway/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/bookticket-api-gateway/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/bookticket-api-gateway",
+  "projects": {
+    "bookticket-api-gateway": {
+      "type": "application",
+      "root": "apps/bookticket-api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/bookticket-api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bookticket-api-gateway/tsconfig.app.json"
+      }
+    },
+    "users": {
+      "type": "application",
+      "root": "apps/users",
+      "entryFile": "main",
+      "sourceRoot": "apps/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users/tsconfig.app.json"
+      }
+    }
+  }
+}
